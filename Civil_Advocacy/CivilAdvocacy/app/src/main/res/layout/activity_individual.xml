@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/partyBackgroundLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Democratic"
+    tools:context=".IndividualOfficial">
+
+    <TextView
+        android:id="@+id/locationTextView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#882188"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="233 South Wacker Drive, Chicago, IL 60606"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/officialNameTextView"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Danny K. Davis"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/officialPhotoTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationTextView3" />
+
+    <TextView
+        android:id="@+id/officialOfficeTextView"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="U.S. Representative"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/officialPhotoTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/officialNameTextView" />
+
+    <TextView
+        android:id="@+id/officialPartyTextView"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="(Democratic Party)"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/officialPhotoTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/officialOfficeTextView" />
+
+    <ImageView
+        android:id="@+id/officialPhotoTextView"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:onClick="onClickImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationTextView3"
+        app:layout_goneMarginEnd="15dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/officialFBLink"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="40dp"
+        android:onClick="onClickFacebook"
+        app:layout_constraintBottom_toBottomOf="@+id/officialTwitterLink"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/officialTwitterLink"
+        app:srcCompat="@drawable/facebook"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/officialTwitterLink"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:onClick="onClickTwitter"
+        app:layout_constraintBottom_toBottomOf="@+id/officialPartyLogo"
+        app:layout_constraintEnd_toStartOf="@+id/officialPartyLogo"
+        app:layout_constraintStart_toEndOf="@+id/officialFBLink"
+        app:layout_constraintTop_toTopOf="@+id/officialPartyLogo"
+        app:srcCompat="@drawable/twitter" />
+
+    <ImageView
+        android:id="@+id/officialPartyLogo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:onClick="onClickPartyLogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/officialPhotoTextView"
+        app:layout_constraintStart_toStartOf="@+id/officialPhotoTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.325"
+        app:srcCompat="@drawable/dem_logo" />
+
+    <TextView
+        android:id="@+id/officialAddressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="64dp"
+        android:text="Address:"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/officialFBLink" />
+
+    <TextView
+        android:id="@+id/officialAddressValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="15dp"
+        android:onClick="onClickAddress"
+        android:text="2159 Rayburn House Office Building Washington, D.C 20515"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/officialAddressTextView"
+        app:layout_constraintTop_toBottomOf="@+id/officialAddressTextView" />
+
+    <TextView
+        android:id="@+id/officialPhoneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/officialAddressTextView"
+        app:layout_constraintTop_toBottomOf="@+id/officialAddressValue" />
+
+    <TextView
+        android:id="@+id/officialPhoneValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="15dp"
+        android:gravity="start"
+        android:onClick="onClickPhone"
+        android:text="(202) 225-5006"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/officialPhoneTextView" />
+
+    <TextView
+        android:id="@+id/officialEmailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/officialPhoneTextView"
+        app:layout_constraintTop_toBottomOf="@+id/officialPhoneValue" />
+
+    <TextView
+        android:id="@+id/officialEmailValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="15dp"
+        android:onClick="onClickEmail"
+        android:text="davisk@mail.house.gov"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/officialEmailTextView" />
+
+    <TextView
+        android:id="@+id/officialWebsiteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Website:"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/officialEmailTextView"
+        app:layout_constraintTop_toBottomOf="@+id/officialEmailValue" />
+
+    <TextView
+        android:id="@+id/officialWebsiteValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="15dp"
+        android:onClick="onClickWebsite"
+        android:text="https://davis.house.gov/"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/officialWebsiteTextView" />
+
+    <ImageView
+        android:id="@+id/officialYoutubeLink"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:onClick="onClickYoutube"
+        app:layout_constraintEnd_toStartOf="@+id/officialTwitterLink"
+        app:layout_constraintStart_toEndOf="@+id/officialFBLink"
+        app:layout_constraintTop_toTopOf="@+id/officialFBLink"
+        app:srcCompat="@drawable/youtube" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
